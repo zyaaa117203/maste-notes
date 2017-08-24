@@ -21,13 +21,13 @@ top interface: Collecion:表示一组对象(纯数据)
  Queue（mainly used to storage）
  
  structure：                      
-                                  HashSet
-                            Set   LinkedHashSet
-                                  TreeSet
+                                  HashSe
+                            Set   LinkedHashSet(插入删除快)
+                                  TreeSet(可排序)
                                   
-                                  Vector
-          Collection        List  ArrayList
-                                  LinkedList
+                                  Vector(有序，线程安全，效率慢)
+          Collection        List  ArrayList(有序，非同步，读取快)
+                                  LinkedList(插入删除快)
                             
                             Queue PriorityQueue
                                   LinkedList
@@ -39,9 +39,9 @@ top interface: Collecion:表示一组对象(纯数据)
  
  structure:
                
-                HashTable
-                HashMap
-          Map   SortedMap  TreeMap
+                HashTable(性能低)
+                HashMap(查询快)
+          Map   SortedMap  TreeMap(内部是红黑树结构)
                 LinkedHashMap 
  
                                   
