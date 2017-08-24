@@ -1,0 +1,53 @@
+基本概念
+集合可以看作是一组长度可变的对象(容器)，我们可以把它看成一个database,无非是增删改查四种操作
+如果我们把这四种操作的时空复杂度弄明白了，这个类也就基本上掌握了。
+
+设计理念
+1.集合框架中使用了面向接口的编程理念:即在系统层次中，下层并不是直接提供具体实现给上层（不会在上层interface中直接实例化具体实现类)
+而是通过定义一组interface暴露给上层，上层与下层仅仅是接口依赖关系。这其实也是“依赖倒置原则”的一种体现。
+2.保证核心接口”小而美“，也就是在顶层的Collection和Map接口中只定义所有实现类中共有的行为（当然这些行为是可选的)，such as:
+  1.基本操作(e.g.add,remove,replace)  
+  2.一些需要子类覆盖的方法(There is a compelling performance reason why an important implementation would want to override it.)
+  3.所有的集合需要提供与数组交互的操作（e.g.toArray()）
+  
+Collections Framework
+top interface: Collecion:表示一组对象(纯数据)
+               Map:表示一组key-value
+              
+                                  
+ Collection sub interface:
+ Set（A collection that contains no duplicate elements）
+ List（An ordered collection (also known as a sequence)）
+ Queue（mainly used to storage）
+ 
+ structure：                      
+                                  HashSet
+                            Set   LinkedHashSet
+                                  TreeSet
+                                  
+                                  Vector
+          Collection        List  ArrayList
+                                  LinkedList
+                            
+                            Queue PriorityQueue
+                                  LinkedList
+                                  
+ Map(not a true collection) three views:
+ map’s contents to be viewed as a set of keys
+ map’s contents to be viewed as a collection of values
+ map’s contents to be viewed as a set of key-value mappings
+ 
+ structure:
+               
+                HashTable
+                HashMap
+          Map   SortedMap  TreeMap
+                LinkedHashMap 
+ 
+                                  
+                                  
+                              
+        
+
+
+               
